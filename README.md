@@ -76,6 +76,7 @@ A constant indicating that dirty reads, non-repeatable reads and phantom reads a
 * [Propagation docs](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/transaction.html#tx-propagation)
 * [Propagation enum](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/annotation/Propagation.html)
 * [Isolation enum](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/annotation/Isolation.html)
+
 ### Material design
 * [Guidelines](https://www.google.com/design/spec/material-design/introduction.html)
 * [Materialup icons](http://www.materialup.com/tools/icons)
