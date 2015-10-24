@@ -6,46 +6,45 @@ Spring transaction explained with material design icons
 
 * *1st icon - when transaction exists*
 
-* *2nd icon - when  none exists*
+* *2nd icon - when none exists*
 
 * *text description*
 
 ## MANDATORY
 ![support](https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_check_circle_black_48dp.png)
 ![exception](https://raw.githubusercontent.com/google/material-design-icons/master/alert/2x_web/ic_error_black_48dp.png)
-Support a current transaction, throw an exception if none exists. Analogous to EJB.
+Support a current transaction or throw an exception. Analogous to EJB.
 
 ## NEVER
 ![exception](https://raw.githubusercontent.com/google/material-design-icons/master/alert/2x_web/ic_error_black_48dp.png)
 ![no](https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_filled_black_48dp.png)
-Execute non-transactionally, throw an exception if a transaction exists. Analogous to EJB.
-
+Throw an exception if a transaction exists or execute non-transactionally. Analogous to EJB.
 
 ## SUPPORTS
 ![support](https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_check_circle_black_48dp.png)
 ![no](https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_filled_black_48dp.png)
-Support a current transaction, execute non-transactionally if none exists. Analogous to EJB.
+Support a current transaction or execute non-transactionally. Analogous to EJB.
 
 ## NOT SUPPORTED
 ![suspend](https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_pause_circle_filled_black_48dp.png)
 ![no](https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_filled_black_48dp.png)
-Execute non-transactionally, suspend the current transaction if one exists. Analogous to EJB.
+Suspend the current transaction if one exists and execute non-transactionally. Analogous to EJB.
 
 ## NESTED
 ![nested](https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_black_48dp.png)
 ![create](https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_black_48dp.png)
 Execute within a nested transaction if a current transaction exists, behave like REQUIRED else. 
-This transaction will be committed dependent from the outer transaction. There is no analogous feature in EJB.
+Inner transaction will be committed dependent from the outer transaction. There is no analogous feature in EJB.
 
 ## REQUIRED
 ![support](https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_check_circle_black_48dp.png)
 ![create](https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_black_48dp.png)
-Support a current transaction, create a new one if none exists. Analogous to EJB.
+Support a current transaction or create a new one. Analogous to EJB.
 
 ## REQUIRES NEW
 ![suspend](https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_pause_circle_filled_black_48dp.png)
 ![create](https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_black_48dp.png)
-Create a new transaction, and suspend the current transaction if one exists. This transaction will be committed or rolled back completely independent from the outer transaction. Analogous to the EJB.
+Suspend the current transaction if one exists and create a new one. This transaction will be committed or rolled back completely independent from the first transaction. Analogous to the EJB.
 
 
 # Transaction isolation
