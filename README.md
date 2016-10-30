@@ -1,69 +1,65 @@
-# Spring transaction in material design
+# Spring transaction in pictures
 
-Spring transaction explained with material design icons
+## PROPAGATION TYPE
 
-## *PROPAGATION TYPE*
+* 1st icon - when transaction exists
 
-* *1st icon - when transaction exists*
-
-* *2nd icon - when none exists*
-
-* *text description*
+* 2nd icon - when none exists
 
 ## MANDATORY
-![support](https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_check_circle_black_48dp.png)
-![exception](https://raw.githubusercontent.com/google/material-design-icons/master/alert/2x_web/ic_error_black_48dp.png)
+![support](img/ic_check_circle_black_48dp.png)
+![exception](img/ic_error_black_48dp.png)
 Support a current transaction or throw an exception. Analogous to EJB.
 
 ## NEVER
-![exception](https://raw.githubusercontent.com/google/material-design-icons/master/alert/2x_web/ic_error_black_48dp.png)
-![no](https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_filled_black_48dp.png)
+![exception](img/ic_error_black_48dp.png)
+![no](img/ic_play_circle_filled_black_48dp.png)
 Throw an exception if a transaction exists or execute non-transactionally. Analogous to EJB.
 
 ## SUPPORTS
-![support](https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_check_circle_black_48dp.png)
-![no](https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_filled_black_48dp.png)
+![support](img/ic_check_circle_black_48dp.png)
+![no](img/ic_play_circle_filled_black_48dp.png)
 Support a current transaction or execute non-transactionally. Analogous to EJB.
 
 ## NOT SUPPORTED
-![suspend](https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_pause_circle_filled_black_48dp.png)
-![no](https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_filled_black_48dp.png)
+![suspend](img/ic_pause_circle_filled_black_48dp.png)
+![no](img/ic_play_circle_filled_black_48dp.png)
 Suspend the current transaction if one exists and execute non-transactionally. Analogous to EJB.
 
 ## NESTED
-![nested](https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_black_48dp.png)
-![create](https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_black_48dp.png)
+![nested](img/ic_add_circle_black_48dp.png)
+![create](img/ic_add_circle_black_48dp.png)
 Execute within a nested transaction if a current transaction exists, behave like REQUIRED else. 
 Inner transaction will be committed dependent from the outer transaction. There is no analogous feature in EJB.
 
 ## REQUIRED
-![support](https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_check_circle_black_48dp.png)
-![create](https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_black_48dp.png)
+![support](img/ic_check_circle_black_48dp.png)
+![create](img/ic_add_circle_black_48dp.png)
 Support a current transaction or create a new one. Analogous to EJB.
 
 ## REQUIRES NEW
-![suspend](https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_pause_circle_filled_black_48dp.png)
-![create](https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_black_48dp.png)
+![suspend](img/ic_pause_circle_filled_black_48dp.png)
+![create](img/ic_add_circle_black_48dp.png)
 Suspend the current transaction if one exists and create a new one. This transaction will be committed or rolled back completely independent from the first transaction. Analogous to the EJB.
 
 
 # Transaction isolation
 
 ## READ UNCOMMITTED
-![dr](http://uxrepo.com/static/icon-sets/google-material/png32/64/000000/android-brightness-1-64-000000.png)
-![nrr](http://uxrepo.com/static/icon-sets/google-material/png32/64/000000/android-repeat-one-64-000000.png)
-![pr](http://uxrepo.com/static/icon-sets/google-material/png32/64/000000/android-adb-64-000000.png)
+![dr](img/ic_pets.png)
+![nrr](img/ic_repeat_one.png)
+![pr](img/ic_person_outline_black_48dp.png)
 
 A constant indicating that **dirty reads, non-repeatable reads and phantom reads** can occur. This level allows a row changed by one transaction to be read by another transaction before any changes in that row have been committed (a "dirty read"). If any of the changes are rolled back, the second transaction will have retrieved an invalid row.
 
 ## READ COMMITTED
-![nrr](http://uxrepo.com/static/icon-sets/google-material/png32/64/000000/android-repeat-one-64-000000.png)
-![pr](http://uxrepo.com/static/icon-sets/google-material/png32/64/000000/android-adb-64-000000.png)
+![nrr](img/ic_repeat_one.png)
+![pr](img/ic_person_outline_black_48dp.png)
 
 A constant indicating that dirty reads are prevented; **non-repeatable reads and phantom reads** can occur. This level only prohibits a transaction from reading a row with uncommitted changes in it.
 
 ## REPEATABLE READ
-![pr](http://uxrepo.com/static/icon-sets/google-material/png32/64/000000/android-adb-64-000000.png)
+![pr](img/ic_person_outline_black_48dp.png)
 
 A constant indicating that dirty reads and non-repeatable reads are prevented; **phantom reads** can occur. This level prohibits a transaction from reading a row with uncommitted changes in it, and it also prohibits the situation where one transaction reads a row, a second transaction alters the row, and the first transaction rereads the row, getting different values the second time (a "non-repeatable read").
 
@@ -80,4 +76,3 @@ A constant indicating that dirty reads, non-repeatable reads and phantom reads a
 ### Material design
 * [Guidelines](https://www.google.com/design/spec/material-design/introduction.html)
 * [Materialup icons](http://www.materialup.com/tools/icons)
-* [Android icons](http://uxrepo.com/tags/android)
